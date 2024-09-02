@@ -25,7 +25,7 @@ public class StatementTest {
         Statement statement = connection.createStatement();
 
         String sql = """
-                INSERT INTO customers(id, name, email) VALUES('fulan', 'fulan', 'fulan@test.com')
+                INSERT INTO customers(id, comment, email) VALUES('alan', 'alan', 'alan@test.com')
                 """;
         int update = statement.executeUpdate(sql);
         System.out.println(update);
@@ -57,7 +57,7 @@ public class StatementTest {
         Statement statement = connection.createStatement();
 
         String sql = """
-                SELECT id, name, email FROM customers
+                SELECT id, comment, email FROM customers
                 """;
         ResultSet resultSet = statement.executeQuery(sql);
         resultSet.close();
